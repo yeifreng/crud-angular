@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ListaEmpleadosComponent {
 
+  titulo:string = 'Listado de empleados';
+
 }
