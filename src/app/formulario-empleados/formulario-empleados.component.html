@@ -3,20 +3,27 @@
     <form action="" class="form-group">
         <div class="mb-3">
             <label class="form-label">Nombre</label>
-            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre empleado">
+            <input [(ngModel)] = "nombreEmpleado" type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre empleado">
         </div>
         <div class="mb-3">
             <label class="form-label">Apellido</label>
-            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido empleado">
+            <input [(ngModel)] = "apellidoEmpleado" type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido empleado">
         </div>
         <div class="mb-3">
             <label class="form-label">Cargo</label>
-            <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Cargo empleado">
+            <input [(ngModel)] = "cargoEmpleado" type="text" class="form-control" name="cargo" id="cargo" placeholder="Cargo empleado">
         </div>
         <div class="mb-3">
             <label class="form-label">Salario</label>
-            <input type="text" class="form-control" name="salario" id="salario" placeholder="Salario empleado">
+            <input [(ngModel)] = "salarioEmpleado" type="text" class="form-control" name="salario" id="salario" placeholder="Salario empleado">
         </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button (click)="guardarEmpleado()" type="submit" class="btn btn-primary">Guardar</button>
     </form>
+    
+    <div class="col">
+      
+        <div class="mb-6">
+         <app-lista-empleados *ngFor="let emp of empleados" [empleado] = "emp"></app-lista-empleados>
+       </div>
+       </div>
 </div>

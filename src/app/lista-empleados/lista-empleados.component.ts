@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Empleado } from '../empleados';
 
 @Component({
@@ -8,13 +8,12 @@ import { Empleado } from '../empleados';
 })
 export class ListaEmpleadosComponent {
 
+//listado es el componente hijo
+
   titulo:string = 'Listado de empleados';
 
-  empleados:Empleado[] = [
-    new Empleado("juan","perez","auxiliar", 1500000),
-    new Empleado("ana","diaz","asesor",2500000),
-    new Empleado("maria","paz","asesor",2500000),
-    new Empleado("luis","daza","director",6500000)
-    ];
+  //estamos recibiendo desde el template, la informacion del componente padre y guardamos eso
+  //en una variable para usarlo en el componente hijo
+  @Input() empleado:Empleado;
 
 }
