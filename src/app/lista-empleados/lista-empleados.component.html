@@ -1,3 +1,23 @@
 <div>
     <h1>{{titulo}}</h1>
+    <table class="table table-responsive center">
+        <thead class="">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cargo</th>
+                <th>Salario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let emp of empleados">
+            <tr>
+                <td>{{emp.nombre}}</td>
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.cargo}}</td>
+                <td>{{emp.salario}}</td>
+                <td><button class="btn btn-primary">Editar</button><button class="btn btn-danger">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
