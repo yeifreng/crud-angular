@@ -7,13 +7,15 @@ import { FormularioEmpleadosComponent } from './formulario-empleados/formulario-
 import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
 import { FormsModule } from '@angular/forms';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioEmpleadosComponent,
     ListaEmpleadosComponent,
-    MenuPrincipalComponent
+    MenuPrincipalComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
