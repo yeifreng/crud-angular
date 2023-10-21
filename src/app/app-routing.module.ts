@@ -4,9 +4,11 @@ import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.compo
 import { AppComponent } from './app.component';
 import { FormularioEmpleadosComponent } from './formulario-empleados/formulario-empleados.component';
 import { ErrorComponent } from './error/error.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
-  {path:'', component:AppComponent},
+  {path:'', pathMatch:'full', redirectTo:'inicio'},
+  {path:'inicio', component:InicioComponent},
   {path:'agregar', component:FormularioEmpleadosComponent},
   {path:'empleados', component:ListaEmpleadosComponent},
   {path:'**', component:ErrorComponent}

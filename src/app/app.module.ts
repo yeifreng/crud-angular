@@ -8,6 +8,7 @@ import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.compo
 import { FormsModule } from '@angular/forms';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { ErrorComponent } from './error/error.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ErrorComponent } from './error/error.component';
     FormularioEmpleadosComponent,
     ListaEmpleadosComponent,
     MenuPrincipalComponent,
-    ErrorComponent
+    ErrorComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
