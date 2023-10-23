@@ -17,16 +17,10 @@ export class FormularioEmpleadosComponent {
     cargoEmpleado:string;
     salarioEmpleado:number;
   
-    empleados:Empleado[] = [
-      new Empleado("juan","perez","auxiliar", 1500000),
-      new Empleado("ana","diaz","asesor",2500000),
-      new Empleado("maria","paz","asesor",2500000),
-      new Empleado("luis","daza","director",6500000)
-      ];
-  
     guardarEmpleado(){
       let miEmpleado = new Empleado(this.nombreEmpleado, this.apellidoEmpleado, this.cargoEmpleado, this.salarioEmpleado);
-      this.empleados.push(miEmpleado);
+      //this.empleados.push(miEmpleado);
+      console.log(miEmpleado);
     }
 
 }
