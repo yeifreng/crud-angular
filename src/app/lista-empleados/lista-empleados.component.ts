@@ -8,5 +8,11 @@ import { Empleado } from '../empleados';
 })
 export class ListaEmpleadosComponent {
 
+//listado es el componente hijo
+
+titulo:string = 'Empleados';
+//estamos recibiendo desde el template, la informacion del componente padre y guardamos eso
+//en una variable para usarlo en el componente hijo
+@Input() empleado:Empleado;
 
 }
