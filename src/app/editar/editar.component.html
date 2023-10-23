@@ -1,1 +1,32 @@
-<p>editar works!</p>
+<div class="row center">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>{{titulo}}</h5>
+            </div>
+            <div class="card-body">
+                <form action="" class="form-group card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input [(ngModel)] = "nombreEmpleadoEditar" type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre empleado">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Apellido</label>
+                        <input [(ngModel)] = "apellidoEmpleadoEditar" type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido empleado">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cargo</label>
+                        <input [(ngModel)] = "cargoEmpleadoEditar" type="text" class="form-control" name="cargo" id="cargo" placeholder="Cargo empleado">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Salario</label>
+                        <input [(ngModel)] = "salarioEmpleadoEditar" type="text" class="form-control" name="salario" id="salario" placeholder="Salario empleado">
+                    </div>
+                    <button (click)="editarEmpleado()" type="submit" class="btn btn-primary">Guardar</button>
+                    <button routerLink="/empleados" type="submit" class="btn btn-danger">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
