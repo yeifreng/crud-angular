@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { ErrorComponent } from './error/error.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { EditarComponent } from './editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InicioComponent } from './inicio/inicio.component';
     ListaEmpleadosComponent,
     MenuPrincipalComponent,
     ErrorComponent,
-    InicioComponent
+    InicioComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
