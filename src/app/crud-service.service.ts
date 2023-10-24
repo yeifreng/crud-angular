@@ -18,4 +18,8 @@ export class CrudServiceService {
     //por medio de la función insertar se envian los datos del empleado
     return this.clienteHttp.post(this.url+"?insertar=1",datosEmpleado);
   }
+
+  obtenerEmpleado(){
+  return this.clienteHttp.get(this.url)
+  }
 }

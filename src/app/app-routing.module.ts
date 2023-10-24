@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'inicio', component:InicioComponent},
   {path:'agregar', component:FormularioEmpleadosComponent},
   {path:'empleados', component:ListaEmpleadosComponent},
-  {path:'editar', component:EditarComponent},
+  {path:'editar/:id', component:EditarComponent},
   {path:'**', component:ErrorComponent}
 
 ];

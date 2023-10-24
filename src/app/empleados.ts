@@ -5,8 +5,7 @@ export class Empleado{
     cargo:string;
     salario:number;
 
-    constructor(id:string, nombre:string, apellido:string, cargo:string, salario:number){
-        this.id = id;
+    constructor(nombre:string, apellido:string, cargo:string, salario:number){
         this.nombre = nombre;
         this.apellido = apellido;
         this.cargo = cargo;
