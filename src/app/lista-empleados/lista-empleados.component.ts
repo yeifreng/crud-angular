@@ -9,6 +9,9 @@ import { CrudServiceService } from '../crud-service.service';
 })
 export class ListaEmpleadosComponent {
 
+  empleados:any;
+  titulo:string = 'Empleados';
+
   constructor(private crudService:CrudServiceService){
 
     this.crudService.obtenerEmpleado().subscribe(respuesta=>{
@@ -18,14 +21,15 @@ export class ListaEmpleadosComponent {
     
   }
 
-  empleados:any;
+  eliminarEmpleado(id:any, indice:any){
+    
+    if(window.confirm('Desea eliminar el empleado?')){
+      this.crudService.eliminarEmpleado(id).subscribe((respuesta)=>{
+        this.empleados.splice(indice,1);
+      });
+    }
+  }
 
-//listado es el componente hijo
-
-titulo:string = 'Empleados';
-//estamos recibiendo desde el template, la informacion del componente padre y guardamos eso
-//en una variable para usarlo en el componente hijo
-@Input() empleado:Empleado;
 
 
 }

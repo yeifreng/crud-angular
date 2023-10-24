@@ -22,4 +22,10 @@ export class CrudServiceService {
   obtenerEmpleado(){
   return this.clienteHttp.get(this.url)
   }
+
+  eliminarEmpleado(id:any):Observable<any>{
+    //se envia la información por metodo post
+    //por medio de la función insertar se envian los datos del empleado
+    return this.clienteHttp.get(this.url+"?borrar="+id);
+  }
 }

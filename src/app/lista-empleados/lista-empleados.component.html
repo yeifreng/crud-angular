@@ -16,13 +16,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let empleado of empleados; let i=index">
+            <tr *ngFor="let empleado of empleados; let indice=index">
                 <td>{{empleado.id}}</td>
                 <td>{{empleado.nombre}}</td>
                 <td>{{empleado.apellido}}</td>
                 <td>{{empleado.cargo}}</td>
                 <td>$ {{empleado.salario}}</td>
-                <td><button class="btn btn-primary" routerLink="/editar/{{ empleado.id }}">Editar</button><button class="btn btn-danger">Eliminar</button></td>
+                <td><button class="btn btn-primary" routerLink="/editar/{{ empleado.id }}">Editar</button><button class="btn btn-danger" (click)="eliminarEmpleado(empleado.id,indice)">Eliminar</button></td>
             </tr>
         </tbody>
     </table>
