@@ -15,7 +15,6 @@ export class ListaEmpleadosComponent {
   constructor(private crudService:CrudServiceService){
 
     this.crudService.obtenerEmpleado().subscribe(respuesta=>{
-      console.log(respuesta)
       this.empleados = respuesta;
     });
     

@@ -28,4 +28,16 @@ export class CrudServiceService {
     //por medio de la función insertar se envian los datos del empleado
     return this.clienteHttp.get(this.url+"?borrar="+id);
   }
+
+  traerEmpleado(id:any):Observable<any>{
+    //se envia la información por metodo post
+    //por medio de la función insertar se envian los datos del empleado
+    return this.clienteHttp.get(this.url+"?consultar="+id);
+  }
+
+  actualizarEmpleado(id:any,datosEmpleado:Empleado):Observable<any>{
+    //se envia la información por metodo post
+    //por medio de la función insertar se envian los datos del empleado
+    return this.clienteHttp.post(this.url+"?actualizar="+id,datosEmpleado);
+  }
 }
