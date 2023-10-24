@@ -24,8 +24,10 @@ export class FormularioEmpleadosComponent {
   
     agregarEmpleado(){
       let miEmpleado = new Empleado(this.nombreEmpleado, this.apellidoEmpleado, this.cargoEmpleado, this.salarioEmpleado);
-      this.crudService.agregarEmpleado(miEmpleado).subscribe();
-      this.router.navigate(['empleados']);
+      this.crudService.agregarEmpleado(miEmpleado).subscribe(respuesta=>{
+        this.router.navigate(['empleados']);
+      });
+      
     }
 
 }
