@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class FormularioEmpleadosComponent {
 
   constructor(private crudService:CrudServiceService, private router:Router){
-
+    
   }
   
   titulo:string = 'Agregar empleado';

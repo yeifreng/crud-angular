@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Empleado } from '../empleados';
+import { Component} from '@angular/core';
 import { CrudServiceService } from '../crud-service.service';
 
 @Component({
